@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_splash">
+
+    <fragment
+        android:id="@+id/navigation_splash"
+        android:name="com.sk.cleartripdemoapplication.presentation.SplashFragment"
+        android:label="Splash"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_to_login"
+            app:destination="@+id/navigation_login_signup" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_login_signup"
+        android:name="com.sk.cleartripdemoapplication.presentation.login_sign_up.LoginSignUpFragment"
+        android:label="LoginSignUp"
+        tools:layout="@layout/fragment_login_sign_up">
+
+        <action
+            android:id="@+id/action_to_plp"
+            app:destination="@+id/navigation_plp" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_plp"
+        android:name="com.sk.cleartripdemoapplication.presentation.listing.ProductListingFragment"
+        android:label="Product Listing"
+        tools:layout="@layout/fragment_product_listing" />
+</navigation>
